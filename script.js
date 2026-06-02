@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const submitBtn = document.getElementById("submit");
     const playerForm = document.getElementById("player-form");
     const gameArea = document.getElementById("game-area");
@@ -7,7 +6,7 @@ const submitBtn = document.getElementById("submit");
 
     let player1 = "";
     let player2 = "";
-    let currentPlayer = "X";
+    let currentPlayer = "x";
     let gameOver = false;
 
     const boardState = Array(9).fill("");
@@ -24,8 +23,8 @@ const submitBtn = document.getElementById("submit");
     ];
 
     submitBtn.addEventListener("click", () => {
-        player1 = document.getElementById("player-1").value.trim();
-        player2 = document.getElementById("player-2").value.trim();
+        player1 = document.getElementById("player1").value.trim();
+        player2 = document.getElementById("player2").value.trim();
 
         if(player1 === "" || player2 === "") {
             alert("Enter both player names");
@@ -50,7 +49,7 @@ const submitBtn = document.getElementById("submit");
 
             if(checkWinner()) {
                 const winnerName =
-                    currentPlayer === "X" ? player1 : player2;
+                    currentPlayer === "x" ? player1 : player2;
 
                 message.textContent =
                     `${winnerName}, congratulations you won!`;
@@ -59,10 +58,10 @@ const submitBtn = document.getElementById("submit");
                 return;
             }
 
-            currentPlayer = currentPlayer === "X" ? "O" : "X";
+            currentPlayer = currentPlayer === "x" ? "o" : "x";
 
             message.textContent =
-                currentPlayer === "X"
+                currentPlayer === "x"
                 ? `${player1}, you're up`
                 : `${player2}, you're up`;
         });
