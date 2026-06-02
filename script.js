@@ -52,7 +52,7 @@ const submitBtn = document.getElementById("submit");
                     currentPlayer === "X" ? player1 : player2;
 
                 message.textContent =
-                    `${winnerName}, congratulations you won!`;
+                    `${winnerName} congratulations you won!`;
 
                 gameOver = true;
                 return;
