@@ -1,1 +1,74 @@
 /*  your css code here. If applicable */
+body {
+    background: #eee;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+}
+
+#player-form {
+    margin-top: 30px;
+}
+
+.input-group {
+    margin: 20px 0;
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    font-size: 24px;
+}
+
+label {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+#submit {
+    width: 250px;
+    padding: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.message {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px;
+}
+        
+#board {
+    width: 450px;
+    margin: auto;
+    display: none;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    cursor: pointer;
+    background-color: pink;
+}
+
+.winner {
+    background-color: purple !important;
+    color: white;
+}
