@@ -6,7 +6,7 @@ const submitBtn = document.getElementById("submit");
 
     let player1 = "";
     let player2 = "";
-    let currentPlayer = "X";
+    let currentPlayer = "x";
     let gameOver = false;
 
     const boardState = Array(9).fill("");
@@ -49,7 +49,7 @@ const submitBtn = document.getElementById("submit");
 
             if(checkWinner()) {
                 const winnerName =
-                    currentPlayer === "X" ? player1 : player2;
+                    currentPlayer === "x" ? player1 : player2;
 
                 message.textContent =
                     `${winnerName} congratulations you won!`;
@@ -58,10 +58,10 @@ const submitBtn = document.getElementById("submit");
                 return;
             }
 
-            currentPlayer = currentPlayer === "X" ? "O" : "X";
+            currentPlayer = currentPlayer === "x" ? "o" : "x";
 
             message.textContent =
-                currentPlayer === "X"
+                currentPlayer === "x"
                 ? `${player1}, you're up`
                 : `${player2}, you're up`;
         });
